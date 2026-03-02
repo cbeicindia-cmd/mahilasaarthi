@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light;
+  --primary: #2d2a8f;
+  --accent: #f05a7e;
+  --surface: #f4f6ff;
+  --text: #1c1d2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: var(--text);
+}
+
+.hero {
+  background: linear-gradient(130deg, var(--primary), #635cf4);
+  color: #fff;
+  padding: 1.2rem 1.5rem 3rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+}
+
+.hero-content {
+  max-width: 740px;
+  margin-top: 2.5rem;
+}
+
+.tag {
+  font-weight: bold;
+  color: #ffd8e2;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.search-box button {
+  border: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1100px;
+  margin: -2rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.quick-actions article,
+.filters,
+.service-grid article {
+  background: var(--surface);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  box-shadow: 0 5px 16px rgba(31, 44, 108, 0.08);
+}
+
+.filters {
+  margin: 1.2rem 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-buttons button {
+  border: 1px solid #d5dcff;
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  background: white;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+}
+
+.service-grid p {
+  margin-bottom: 0.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #6f7695;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 640px) {
+  .search-box {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahila Saarthi - Government Services Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="top-nav">
+        <h1>Mahila Saarthi</h1>
+        <a href="#service-grid">Explore Services</a>
+      </nav>
+      <div class="hero-content">
+        <p class="tag">One-stop government support platform</p>
+        <h2>Access Government Services in One Place</h2>
+        <p>
+          Browse welfare schemes, civic services, documents, healthcare, and
+          support programs from central and state departments.
+        </p>
+        <form id="search-form" class="search-box" autocomplete="off">
+          <label for="service-search" class="sr-only">Search services</label>
+          <input
+            id="service-search"
+            type="search"
+            placeholder="Search service, scheme, department..."
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section class="quick-actions" aria-label="Quick Actions">
+        <article>
+          <h3>Apply Online</h3>
+          <p>Fill and submit service applications digitally.</p>
+        </article>
+        <article>
+          <h3>Track Status</h3>
+          <p>Monitor request progress with application IDs.</p>
+        </article>
+        <article>
+          <h3>Download Certificates</h3>
+          <p>Get verified documents instantly.</p>
+        </article>
+        <article>
+          <h3>Get Help</h3>
+          <p>Reach support centers and helplines quickly.</p>
+        </article>
+      </section>
+
+      <section class="filters" aria-label="Service Categories">
+        <h3>Service Categories</h3>
+        <div class="filter-buttons" id="filter-buttons"></div>
+      </section>
+
+      <section>
+        <h3>Available Government Services</h3>
+        <p id="result-summary" aria-live="polite"></p>
+        <div id="service-grid" class="service-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Mahila Saarthi | Built for accessible public services.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
