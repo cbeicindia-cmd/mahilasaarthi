@@ -1,0 +1,158 @@
+:root {
+  --bg: #eef2f6;
+  --card: #ffffff;
+  --text: #10233f;
+  --accent: #0a5db0;
+  --accent-soft: #d8e8fb;
+  --border: #c3cfdd;
+}
+
+:root[data-theme='teal-modern'] {
+  --bg: #e9f6f5;
+  --card: #ffffff;
+  --text: #123635;
+  --accent: #0f8f88;
+  --accent-soft: #d0f1ef;
+  --border: #9ad2cd;
+}
+
+:root[data-theme='high-contrast'] {
+  --bg: #111;
+  --card: #1f1f1f;
+  --text: #fff;
+  --accent: #ffd400;
+  --accent-soft: #2f2f2f;
+  --border: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--accent);
+  color: #fff;
+}
+
+.subtitle {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.grid-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.inline-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+label {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+}
+
+input,
+select,
+button {
+  padding: 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.status,
+.banner {
+  background: var(--accent-soft);
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.portal-box {
+  margin: 0.8rem 0;
+  padding: 0.6rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+}
+
+a {
+  color: var(--accent);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.rule-list {
+  margin: 0.2rem 0 0.8rem;
+  padding-left: 1rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.stats > div {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 0.5rem;
+}
