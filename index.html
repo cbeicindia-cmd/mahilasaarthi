@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="gov-classic">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mahila Saarthi Portal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Mahila Saarthi Digital Seva</h1>
+        <p class="subtitle">Government Scheme Assistance & Agent Commission Portal</p>
+      </div>
+      <div class="topbar-actions">
+        <label for="themeSelect">Theme</label>
+        <select id="themeSelect">
+          <option value="gov-classic">Government Classic</option>
+          <option value="teal-modern">Teal Modern</option>
+          <option value="high-contrast">High Contrast</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>User Registration</h2>
+        <form id="registerForm" class="grid-form">
+          <label>
+            Full Name
+            <input required name="name" placeholder="Enter full name" />
+          </label>
+          <label>
+            Mobile
+            <input required name="mobile" placeholder="10-digit mobile" pattern="[0-9]{10}" />
+          </label>
+          <label>
+            Role
+            <select name="role" required>
+              <option value="endUser">End User</option>
+              <option value="agent">Agent</option>
+              <option value="superAdmin">Super Admin</option>
+            </select>
+          </label>
+          <button type="submit">Register User</button>
+        </form>
+        <p id="registerStatus" class="status"></p>
+
+        <h3>Switch Active Account</h3>
+        <div class="switcher">
+          <select id="activeUserSelect"></select>
+          <button id="setActiveBtn" type="button">Set Active User</button>
+        </div>
+        <p id="activeUserBanner" class="banner"></p>
+      </section>
+
+      <section class="card" id="userPanel">
+        <h2>User / Agent Panel</h2>
+        <p>Apply for multiple schemes and redirect to official portals for assisted processing.</p>
+
+        <form id="applicationForm" class="grid-form">
+          <label>
+            Beneficiary
+            <select id="beneficiarySelect" required></select>
+          </label>
+          <label>
+            Select Scheme
+            <select id="schemeSelect" required></select>
+          </label>
+          <label>
+            Documents Submitted
+            <select id="docsStatus" required>
+              <option value="Yes">Yes</option>
+              <option value="Pending">Pending</option>
+            </select>
+          </label>
+          <button type="submit">Apply Scheme</button>
+        </form>
+
+        <div class="portal-box">
+          <strong>Government Portal Redirect:</strong>
+          <a id="portalLink" href="#" target="_blank" rel="noopener">Open selected scheme portal</a>
+        </div>
+
+        <h3>Applied Schemes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Beneficiary</th>
+              <th>Scheme</th>
+              <th>Processed By</th>
+              <th>Commission (₹)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="applicationsBody"></tbody>
+        </table>
+      </section>
+
+      <section class="card" id="adminPanel">
+        <h2>Super Admin Panel</h2>
+        <div class="stats" id="stats"></div>
+
+        <h3>Rules & Compliance</h3>
+        <ul id="rulesList" class="rule-list"></ul>
+
+        <form id="ruleForm" class="inline-form">
+          <input id="ruleInput" placeholder="Add new rule" required />
+          <button type="submit">Add Rule</button>
+        </form>
+
+        <h3>Manage Schemes</h3>
+        <form id="schemeForm" class="grid-form">
+          <label>
+            Scheme Name
+            <input id="schemeName" required />
+          </label>
+          <label>
+            Commission ₹
+            <input id="schemeCommission" type="number" min="0" required />
+          </label>
+          <label>
+            Portal URL
+            <input id="schemeUrl" type="url" placeholder="https://..." required />
+          </label>
+          <button type="submit">Add Scheme</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Scheme</th>
+              <th>Commission</th>
+              <th>Portal</th>
+            </tr>
+          </thead>
+          <tbody id="schemesBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
